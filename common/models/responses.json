@@ -20,6 +20,9 @@
     },
     "Content": {
       "type": "string"
+    },
+    "Name": {
+      "type": "string"
     }
   },
   "validations": [],

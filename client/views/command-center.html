@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SmartClickr | Home</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="/css/userhome.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/main.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/inline-labels.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css" media="screen">
+<style>.error{
+ color:#b94a48 !important; 
+}
+
+@media screen and (min-width: 1200px){
+ label.inline.supported.empty{
+  left: 128px !important;
+  font-size: 16px !important;
+  
+ }
+}
+@media screen and (max-width: 1199px){
+ label.inline.supported.empty{
+  left: 85px !important; 
+  font-size: 16px !important;
+  
+ }
+}
+
+@media screen and (max-width: 979px){
+ label.inline.supported.empty{
+  left: 42px !important ;
+  font-size: 15px !important;
+ }
+}
+
+@media screen and (max-width: 767px){
+ label.inline.supported.empty{
+  left: 12px !important ;
+ }
+}
+
+</style>
+<!-- Add Jquery //-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.js">
+</script>
+<script type="text/javascript" src="/infieldlabel.min.js">
+</script>
+<script type="text/javascript" src="/javascript/userSearch.js">
+</script>
+<!-- Add Bootstrap Library //-->
+<script type="text/javascript" src="/bootstrap/bootstrap.min.js">
+</script>
+<script src="/inline-labels.js" type="text/javascript" charset="utf-8">
+</script>
+<!-- Add Less //-->
+<script>$(document).ready(function(){
+ $("#searchLabel").inFieldLabels();
+});
+</script>
+<script type="text/javascript" src="/less.js">
+</script>
+<noscript>
+<div id="no-js" class="modal"> 
+<div class="modal-header">
+<p>JavaScript has been turned off.</p>
+<p>Please enable to view full site and get full use of our product. </p>
+</div>
+<div class="modal-footer">
+<a href="http://www.enable-javascript.com" target="_blank">
+ This article can tell you why Javascript is important and how to turn it on</a>
+</div>
+</div>
+<div class="modal-backdrop">
+</div>
+</noscript>
+</head>
+<body>
+<script src="/javascript/randomGreeting.js">
+</script>
+<!-- Header Content //-->
+<header class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<a data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar">
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+</a>
+<a href="/" class="brand"> 
+SmartClickr
+<span> Command Center</span>
+</a>
+<div class="nav-collapse in collapse">
+<ul class="nav pull-right">
+<li class="active">
+<a id="home" href="/">Home</a>
+</li>
+<li>
+<a id="account" href="/user/edit/63">Account</a>
+</li>
+<li>
+<a id="help" href="/help">Help Center</a>
+</li>
+<li>
+<a id="logout" href="/logout">Log Out</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<div id="main-content">
+</div>
+<article id="user_hero">
+<div class="container">
+<section id="user_greeting" class="clearfix">
+<h2 id="user_hello" class="span5 visible-desktop">
+<return>Hi there, Noah</return>
+</h2>
+<h2 id="user_hello" class="span5 hidden-desktop">
+<return>Hey, Noah</return>
+</h2>
+<!-- this type of call gets the desired info about the user-->
+<!--#{locals.udata.FirstName} -->
+<div class="span6 hidden-phone">
+<p id="greeting" class="bubble">
+</p>
+<div class="clear">
+</div>
+</div>
+<aside id="actions_container" class="span12">
+<div id="user_actions" class="span5 hidden-phone">
+<a id="create_button" href="/user/63/poll/create" class="big button red">Create a Poll</a>
+<div class="clear">
+</div>
+</div>
+<div id="user_search" class="span6">
+<form id="index-session" method="GET" action="/poll" class="form-inline">
+<fieldset id="search-container">
+<label for="index-search" style="width: auto !important; top:10px !important;" class="inline">Enter a session code</label>
+<input type="search" id="index-search" autocomplete="off">
+<!--input(type="search", id="index-search", placeholder="Enter a session code", autocomplete="off", class="visible-phone")-->
+<button type="submit" name="session" class="btn btn-info">Find it &rarr;</button>
+</fieldset>
+</form>
+</div>
+<div class="span6">
+</div>
+</aside>
+</section>
+</div>
+<hr>
+</article>
+<section id="content_container">
+<div class="container">
+<div class="row-fluid">
+<div class="backdrop dropshadow">
+<section id="user_content">
+<div id="user_actions" class="span5 visible-phone clearfix">						
+<a id="create_button" href="/user/63/poll/create" class="big button red">
+Create a Poll</a>
+</div>
+<div id="poll_container" class="clearfix">
+<form method="post" class="pollActions">
+<article id="poll_brief" class="span">
+<aside id="sub_info">
+<a href="#">
+<span>
+</span>
+<a href="#">
+<h1 id="poll_title">Test2</h1>
+<div id="date-time">Apr 06, 2016</div>
+</a>
+<div class="clear">	</div>
+</a>
+</aside>
+<span>
+<aside id="sub_content">
+<p>YadaYada</p>
+</aside>
+</span>
+<aside id="poll-actions">
+<section id="poll-links" class="span6">
+<p>Session Code: jNtu</p>
+<p>Url: <a href="/poll/jNtu">smartclickr.com/poll/jNtu</a>
+</p>
+</section>
+<ul id="alt-actions" class="span6">
+<li id="edit_poll137">
+<button id="home-edit" formaction="/user/63/poll/edit/137" type="submit" formmethod="GET" class="btn btn-medium btn-info">Edit</button>
+</li>
+<li id="delete_poll137">
+<button href="#deleteConfirm137" role="button" data-toggle="modal" class="btn btn-medium btn-info">Delete</button>
+<!-- Delete Confirmation Modal //-->
+<div id="deleteConfirm137" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmLabel" aria-hidden="true" style="text-align: left" class="modal hide fade">
+<div class="modal-header">
+<button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+<h5 id="deleteConfirmLabel">Are you sure you want to delete this poll?</h5>
+<p>This will remove all questions and responses associated with this poll and cannot be undone</p>
+</div>
+<div class="modal-footer">
+<button data-dismiss="modal" aria-hidden="true" class="btn">Cancel</button>
+<button formmethod="POST" formaction="/user/63/poll/delete/137" type="submit" class="btn btn-medium btn-danger">Delete</button>
+</div>
+</div>
+</li>
+<li id="start_poll137">
+<button id="home-start" formmethod="GET" formaction="/user/63/poll/137" class="btn btn-medium btn-info">Start</button>
+</li>
+</ul>
+</aside>
+<hr>
+</article>
+</form>
+</div>
+<div id="poll_container" class="clearfix">
+<form method="post" class="pollActions">
+<article id="poll_brief" class="span">
+<aside id="sub_info">
+<a href="#">
+<span>
+</span>
+<a href="#">
+<h1 id="poll_title">test</h1>
+<div id="date-time">Mar 18, 2015</div>
+</a>
+<div class="clear">	</div>
+</a>
+</aside>
+<span>
+<aside id="sub_content">
+<p>
+</p>
+</aside>
+</span>
+<aside id="poll-actions">
+<section id="poll-links" class="span6">
+<p>Session Code: wWZJ</p>
+<p>Url: <a href="/poll/wWZJ">smartclickr.com/poll/wWZJ</a>
+</p>
+</section>
+<ul id="alt-actions" class="span6">
+<li id="edit_poll130">
+<button id="home-edit" formaction="/user/63/poll/edit/130" type="submit" formmethod="GET" class="btn btn-medium btn-info">Edit</button>
+</li>
+<li id="delete_poll130">
+<button href="#deleteConfirm130" role="button" data-toggle="modal" class="btn btn-medium btn-info">Delete</button>
+<!-- Delete Confirmation Modal //-->
+<div id="deleteConfirm130" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmLabel" aria-hidden="true" style="text-align: left" class="modal hide fade">
+<div class="modal-header">
+<button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+<h5 id="deleteConfirmLabel">Are you sure you want to delete this poll?</h5>
+<p>This will remove all questions and responses associated with this poll and cannot be undone</p>
+</div>
+<div class="modal-footer">
+<button data-dismiss="modal" aria-hidden="true" class="btn">Cancel</button>
+<button formmethod="POST" formaction="/user/63/poll/delete/130" type="submit" class="btn btn-medium btn-danger">Delete</button>
+</div>
+</div>
+</li>
+<li id="start_poll130">
+<button id="home-start" formmethod="GET" formaction="/user/63/poll/130" class="btn btn-medium btn-info">Start</button>
+</li>
+</ul>
+</aside>
+<hr>
+</article>
+</form>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Content //-->
+<footer id="logged-in">
+<div id="footer_container" class="container">
+<div class="row-fluid">
+<div id="footer_content">
+<ul>
+<li id="copy"> 
+©
+SmartClickr</li>
+<li class="divider-vertical">
+<a href="/help">Help Center </a>
+</li>
+<li class="divider-vertical">
+<a href="/privacy">Privacy </a>
+</li>
+<li>
+<a href="/terms">Terms of Service<div class="clear">
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
