@@ -1,0 +1,47 @@
+{
+  "name": "Question",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Question_id": {
+      "type": "number",
+      "required": true
+    },
+    "Poll_id": {
+      "type": "number",
+      "required": true
+    },
+    "Stem": {
+      "type": "string"
+    },
+    "Answertype": {
+      "type": "string"
+    },
+    "QuestionOrder": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "choices": {
+      "type": "hasMany",
+      "model": "Choices",
+      "foreignKey": ""
+    },
+    "responses": {
+      "type": "hasMany",
+      "model": "Responses",
+      "foreignKey": ""
+    },
+    "poll": {
+      "type": "belongsTo",
+      "model": "Poll",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
