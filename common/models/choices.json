@@ -1,0 +1,37 @@
+{
+  "name": "Choices",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Choice_id": {
+      "type": "number",
+      "required": true
+    },
+    "Question_id": {
+      "type": "number",
+      "required": true
+    },
+    "ChoiceOrder": {
+      "type": "number"
+    },
+    "Correct": {
+      "type": "boolean"
+    },
+    "Content": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "question": {
+      "type": "belongsTo",
+      "model": "Question",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

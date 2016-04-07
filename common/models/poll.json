@@ -1,0 +1,55 @@
+{
+  "name": "Poll",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Poll_id": {
+      "type": "number",
+      "required": true
+    },
+    "Owner_id": {
+      "type": "number",
+      "required": true
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Order": {
+      "type": "number"
+    },
+    "Sessioncode": {
+      "type": "string"
+    },
+    "CreateDate": {
+      "type": "date"
+    },
+    "StartDate": {
+      "type": "date"
+    },
+    "EndDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "questions": {
+      "type": "hasMany",
+      "model": "Question",
+      "foreignKey": ""
+    },
+    "users": {
+      "type": "belongsTo",
+      "model": "Users",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

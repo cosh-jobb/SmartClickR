@@ -1,0 +1,38 @@
+{
+  "name": "Responses",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Response_id": {
+      "type": "number",
+      "required": true
+    },
+    "Question_id": {
+      "type": "number",
+      "required": true
+    },
+    "User_id": {
+      "type": "number",
+      "required": true
+    },
+    "Content": {
+      "type": "string"
+    },
+     "Name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "question": {
+      "type": "belongsTo",
+      "model": "Question",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
