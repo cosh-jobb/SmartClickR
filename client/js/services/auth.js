@@ -1,5 +1,5 @@
 angular
-  .module('app')
+  .module('smartclickr')
   .factory('AuthService', ['Reviewer', '$q', '$rootScope', function(User, $q,
       $rootScope) {
     function login(email, password) {
