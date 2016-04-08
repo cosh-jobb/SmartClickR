@@ -7,6 +7,8 @@ angular.module('smartclickr', [
 
 I added this again
 
+
+
 .config([ '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	// define client routes, i.e., urls
 	$stateProvider
