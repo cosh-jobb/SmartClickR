@@ -5,7 +5,7 @@ angular.module('smartclickr', [
 	'lbServices'
 ])
 
-I added this
+I added this again
 
 .config([ '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	// define client routes, i.e., urls
