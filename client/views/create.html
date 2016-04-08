@@ -15,62 +15,129 @@
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css" media="screen">
 <!-- Add Jquery //-->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+</script>
 <link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.9.2.custom.min.css">
 <!-- Add Foundation Library //-->
-<script type="text/javascript" src="/bootstrap/bootstrap.min.js"></script>
-<script type="text/javascript" src="/less.js"></script>
-<noscript><div id="no-js" class="modal"> 
-<div class="modal-header"><p>JavaScript has been turned off.</p>
-<p>Please enable to view full site and get full use of our product. </p></div>
+<script type="text/javascript" src="/bootstrap/bootstrap.min.js">
+</script>
+<script type="text/javascript" src="/less.js">
+</script>
+<noscript>
+<div id="no-js" class="modal"> 
+<div class="modal-header">
+<p>JavaScript has been turned off.</p>
+<p>Please enable to view full site and get full use of our product. </p>
+</div>
 <div class="modal-footer">
 <a href="http://www.enable-javascript.com" target="_blank"> 
-This article can tell you why Javascript is important and how to turn it on</a></div></div>
-<div class="modal-backdrop"></div></noscript></head>
-<body><body id="signup-body"></body>
+This article can tell you why Javascript is important and how to turn it on</a>
+</div>
+</div>
+<div class="modal-backdrop">
+</div>
+</noscript>
+</head>
+<body>
+<body id="signup-body">
+</body>
 <header class="navbar navbar-inverse navbar-fixed-top">
-<div class="navbar-inner"><div class="container">
+<div class="navbar-inner">
+<div class="container">
 <a data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span></a>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+</a>
 <a href="/" class="brand"> 
-SmartClickR<span> alpha</span></a>
+SmartClickR<span> alpha</span>
+</a>
 <div style="" class="nav-collapse">
 <ul class="nav pull-right">
-<li><a id="home" href="/">Home</a></li>
-<li><a id="features" href="/features">Features</a></li>
-<li class="active"><a id="signup" href="#/create">
-Sign Up</a></li><li>
-<a id="log" href="/login">Log In</a></li></ul></div></div></div></header>
-<div id="hero"><div class="container">
+<li>
+<a id="home" href="/">Home</a>
+</li>
+<li>
+<a id="features" href="/features">Features</a>
+</li>
+<li class="active">
+<a id="signup" href="#/create">
+Sign Up</a>
+</li>
+<li>
+<a id="log" href="/login">Log In</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<div id="hero">
+<div class="container">
 <div class="row-fluid">
-<div class="span8 offset2"><h1 class="title">Let's Go</h1></div></div>
-<div class="clear dropshadow"></div></div></div>
-<div id="signup-container"><div class="container"> 
-<div class="row-fluid"><div class="span8 offset2">
-<section id="signup-content"><form id="signupForm" method="post" action="#/create">
-<fieldset><span class="field">
-<label id="firstNameLabel" for="firstName" class="form-label span3">First Name</label>
-<input id="firstName" type="text" name="firstName" title="Full Name" autocomplete="off" class="input-block-level span9"></span>
+<div class="span8 offset2">
+<h1 class="title">Let's Go</h1>
+</div>
+</div>
+<div class="clear dropshadow">
+</div>
+</div>
+</div>
+<div id="signup-container">
+<div class="container"> 
+<div class="row-fluid">
+<div class="span8 offset2">
+<section id="signup-content">
+<form name="form" ng-submit=register()>
+<fieldset>
+<!--<span class="field">
+<label id="firstNameLabel" for="firstName" class="form-label span3" >First Name</label>
+<input id="firstName" type="text" name="firstName" title="Full Name" autocomplete="off" class="input-block-level span9">
+</span>
 <span class="field">
 <label id="lastNameLabel" for="lastName" class="form-label span3">Last Name</label>
 <input id="lastName" type="text" name="lastName" title="Full Name" autocomplete="off" class="input-block-level span9">
-<div class="clear"></div></span>
-<span class="field">
-<label id="emailLabel" for="email" class="form-label span3">Email</label>
-<input id="email" type="text" name="email" title="Email Address" autocomplete="off" class="input-block-level span9">
-<div class="clear"></div></span>
-<span class="field password">
-<label id="passwordLabel" for="password" class="form-label span3">Password</label>
-<input id="password" type="password" name="password" title="Password" autocomplete="off" class="input-block-level span9">
-<div class="clear"></div></span></fieldset>
+<div class="clear">
+</div>
+</span>-->
+<span class="emailField">
+<label id="emailLabel" for="email" class="form-label span3" ng-model="email">Email</label>
+<input type="text" name="email" title="email" autocomplete="off" class="input-block-level span9" ng-model=user.email>
+<div class="clear">
+</div>
+</span>
+<span class="passwordField">
+<label id="passwordLabel" for="password" class="form-label span3" ng-model="password">Password</label>
+<input type="password" name="password" ng-model="user.password" autocomplete="off" class="input-block-level span9">
+<div class="clear">
+</div>
+</span>
+</fieldset>
 <span12 class="no_pad">
 <div id="bottom-actions" class="clearfix">
 <fieldset class="check span7">
 <label id="termsLabel">
-<input id="termsCheckBox" name="checkTerms" type="checkbox" checked="checked">I agree to the<a href="#"> Terms of Service</a></label></fieldset>
+<input id="termsCheckBox" name="checkTerms" type="checkbox" checked="checked">I agree to the<a href="#"> Terms of Service</a>
+</label>
+</fieldset>
 <fieldset id="action-btn" class="form-action span5">
-<input id="signup_submit" type="submit" value="Create My Account" class="btn btn-large"></fieldset><hr></div></span12></form></section></div></div></div></div>
-<script src="/javascript/views/signup.js"></script>
-<script src="/jquery.login.min.js"></script></body></html>
+<input id="signup_submit" type="submit" value="Create My Account" class="btn btn-large">
+</fieldset>
+<hr>
+</div>
+</span12>
+</form>
+</section>
+</div>
+</div>
+</div>
+</div>
+<!--<script src="/javascript/views/signup.js">
+</script>
+<script src="/jquery.login.min.js">
+</script>-->
+</body>
+</html>

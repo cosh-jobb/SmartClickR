@@ -1,19 +1,30 @@
 
-<!DOCTYPE html><html><head><title>SmartClickr | Login</title>
+<!DOCTYPE html>
+<html>
+<head>
+<title>SmartClickr | Login</title>
 <meta name="viewport" content="width=device-width">
 <link(rel='stylesheet', type='text/css', href='/css/main.css', media='screen')>
 <link rel="stylesheet" type="text/css" href="/css/login.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/css/forms.css" media="screen">
 <!-- Add Jquery //-->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript" src="/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+</script>
+<script type="text/javascript" src="/bootstrap/bootstrap.min.js">
+</script>
 <noscript>
 <div id="no-js" class="modal"> <div class="modal-header">
 <p>JavaScript has been turned off.</p>
-<p>Please enable to view full site and get full use of our product. </p></div>
+<p>Please enable to view full site and get full use of our product. </p>
+</div>
 <div class="modal-footer">
-<a href="http://www.enable-javascript.com" target="_blank"> This article can tell you why Javascript is important and how to turn it on</a></div></div>
-<div class="modal-backdrop"></div></noscript></head>
+<a href="http://www.enable-javascript.com" target="_blank"> This article can tell you why Javascript is important and how to turn it on</a>
+</div>
+</div>
+<div class="modal-backdrop">
+</div>
+</noscript>
+</head>
 <body>
 <!-- Login Modal //-->
 <body id="login_page">
@@ -22,23 +33,47 @@
 <div class="six columns centered">
 <div id="login-form-wrap">
 <h1 class="logo">
-<a id="title" href="/">SmartClickr</a></h1>
-<form id="loginForm" method="post" action="/login">
-<fieldset class="clearfix"><div class="above-below login-field clearfix">
+<a id="title" href="/">SmartClickr</a>
+</h1>
+<form id="loginForm" method="post" ng-submit="login()">
+<fieldset class="clearfix">
+<div class="above-below login-field clearfix">
 <label for="email" class="placeholder">Your Email </label>
-<input id="email" type="input" name="email" title="Email Address" tabindex="1" autocomplete="off" class="required form-text">
-<div class="clear"></div></div>
+<input id="email" type="input" name="email" title="Email Address" tabindex="1" autocomplete="off" class="required form-text" ng-model=user.login>
+<div class="clear">
+</div>
+</div>
 <div class="above-below login-field clearfix">
 <label for="password" class="placeholder">Password</label>
-<input id="password" type="password" name="password" title="Password" tabindex="2" autocomplete="off" class="required form-text">
-<div class="clear"> </div></div></fieldset>
-<div class="twelve columns no_pad"></div>
+<input id="password" type="password" name="password" title="Password" tabindex="2" autocomplete="off" class="required form-text" ng-model=user.password>
+<div class="clear">	</div>
+</div>
+</fieldset>
+<div class="twelve columns no_pad">
+</div>
 <input id="login_submit" type="submit" tabindex="3" value="Log In">
 <p id="remember">
 <input id="remember-me" type="checkbox" checked="true" name="remember-me">
-<label id="rem-label" for="remember-me">Remember Me</label></p>
-<div class="clear"></div><p><a id="needSignup" href="/user/create">Need to Signup? </a>
-<span class="linebreak">|</span><a id="reset" href="/lostpassword">Forgot Your Password?  </a></p><hr></form></div></div></div></div>
-<hr></body>
-<script src="/javascript/views/login.js"></script>
-<script src="/jquery.login.min.js"></script></body></html>
+<label id="rem-label" for="remember-me">Remember Me</label>
+</p>
+<div class="clear">
+</div>
+<p>
+<a id="needSignup" href="/user/create">Need to Signup? </a>
+<span class="linebreak">|</span>
+<a id="reset" href="/lostpassword">Forgot Your Password?	</a>
+</p>
+<hr>
+</form>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</body>
+<!--<script src="/javascript/views/login.js">
+</script>
+<script src="/jquery.login.min.js">-->
+</script>
+</body>
+</html>

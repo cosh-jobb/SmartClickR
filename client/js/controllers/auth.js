@@ -1,5 +1,4 @@
-angular
-  .module('smartclickr')
+angular.module('smartclickr')
   .controller('AuthLoginController', ['$scope', 'AuthService', '$state',
       function($scope, AuthService, $state) {
     $scope.user = {
@@ -10,7 +9,7 @@ angular
     $scope.login = function() {
       AuthService.login($scope.user.email, $scope.user.password)
         .then(function() {
-          $state.go('login');
+          $state.go('command-center');
         });
     };
   }])
@@ -18,12 +17,12 @@ angular
       function($scope, AuthService, $state) {
     AuthService.logout()
       .then(function() {
-        $state.go('login');
+        $state.go('home');
       });
   }])
-  .controller('SignUpController', ['$scope', 'AuthService', '$state',
+  .controller('Registration', ['$scope', 'AuthService', '$state',
       function($scope, AuthService, $state) {
-    $scope.user = {
+    $scope.person = {
       email: 'baz@qux.com',
       password: 'bazqux'
     };
@@ -31,7 +30,49 @@ angular
     $scope.register = function() {
       AuthService.register($scope.user.email, $scope.user.password)
         .then(function() {
-          $state.transitionTo('home');
+          $state.transitionTo('sign-up-success');
         });
+    };
+  }]);
+
+  angular
+  .module('smartclickr')
+  .factory('AuthService', ['Reviewer', '$q', '$rootScope', function(User, $q,
+      $rootScope) {
+    function login(email, password) {
+      return User
+        .login({email: email, password: password})
+        .$promise
+        .then(function(response) {
+          $rootScope.currentUser = {
+            id: response.user.id,
+            tokenId: response.id,
+            email: email
+          };
+        });
+    }
+
+    function logout() {
+      return User
+       .logout()
+       .$promise
+       .then(function() {
+         $rootScope.currentUser = null;
+       });
+    }
+
+    function register(email, password) {
+      return User
+        .create({
+         email: email,
+         password: password
+       })
+       .$promise;
+    }
+
+    return {
+      login: login,
+      logout: logout,
+      register: register
     };
   }]);

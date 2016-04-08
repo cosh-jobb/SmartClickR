@@ -5,9 +5,8 @@ angular.module('smartclickr', [
 	'lbServices'
 ])
 
-I
-
-.config([ '$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+.config([ '$stateProvider', '$urlRouterProvider',
+ function($stateProvider, $urlRouterProvider){
 	// define client routes, i.e., urls
 	$stateProvider
 	 .state('features', {
@@ -16,20 +15,21 @@ I
 	 })
 	  .state('login', {
 	 	url: '/login',
-	 	templateUrl: 'views/login.html'
+	 	templateUrl: 'views/login.html',
+	 	controller: 'AuthLoginController',
 	 })
 	  .state('command-center', {
 	 	url: '/command-center',
-	 	templateUrl: 'views/command-center.html',
-	 	authenticate: true
+	 	templateUrl: 'views/command-center.html'
 	 })
 	  .state('forbidden', {
 	 	url: '/forbidden',
 	 	templateUrl: 'views/forbidden.html'
 	 })
-	  .state('create', {
-	 	url: '/create',
-	 	templateUrl: 'views/create.html'
+	  .state('register', {
+	 	url: '/register',
+	 	templateUrl: 'views/create.html',
+	 	controller: 'Registration'
 	 })
 	  .state('signup', {
 	 	url: '/signup',
@@ -38,6 +38,15 @@ I
 	  .state('home', {
 	 	url: '/',
 	 	templateUrl: 'views/home.html'
+	 })
+	  .state('create', {
+	 	url: '/create',
+	 	templateUrl: 'views/createpoll.html'
+	 })
+	  .state('poll', {
+	 	url: '/poll',
+	 	templateUrl: 'views/poll.html',
+	 	controller: 'PollController'
 	 });
 	 $urlRouterProvider.otherwise('/');
 	}])
@@ -49,5 +58,4 @@ I
   			$state.go('forbidden');
   		}
   	})
-  }]); 
-}];
+  }]);
