@@ -33,7 +33,7 @@ angular.module('smartclickr', [
 	 	templateUrl: 'views/signup.html'
 	 })
 	  .state('home', {
-	 	url: '/home',
+	 	url: '/',
 	 	templateUrl: 'views/home.html'
 	 });
 	 $urlRouterProvider.otherwise('/');
