@@ -42,5 +42,18 @@ angular.module('smartclickr', [
 	 	templateUrl: 'views/createpoll.html'
 	 });
 	 $urlRouterProvider.otherwise('/');
+<<<<<<< HEAD
 	 
+=======
+	}])
+ 
+  .run(['$rootScope', '$state', function($rootScope, $state) {
+  	$rootScope.$on('$stateChangeStart', function(event, next){
+  		if (next.authenticate && !$rootScope.currentUser){
+  			event.preventDefault();
+  			$state.go('forbidden');
+  		}
+  	})
+  }]); 
+>>>>>>> eaa0ae2965cfa48fa84e70f7ea200f82406e936f
 }]);
