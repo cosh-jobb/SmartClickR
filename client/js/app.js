@@ -25,8 +25,8 @@ angular.module('smartclickr', [
 	 	url: '/forbidden',
 	 	templateUrl: 'views/forbidden.html'
 	 })
-	  .state('register', {
-	 	url: '/register',
+	  .state('create', {
+	 	url: '/create',
 	 	templateUrl: 'views/create.html'
 	 })
 	  .state('signup', {
@@ -36,15 +36,8 @@ angular.module('smartclickr', [
 	  .state('home', {
 	 	url: '/',
 	 	templateUrl: 'views/home.html'
-	 })
-	  .state('create', {
-	 	url: '/create',
-	 	templateUrl: 'views/createpoll.html'
 	 });
 	 $urlRouterProvider.otherwise('/');
-<<<<<<< HEAD
-	 
-=======
 	}])
  
   .run(['$rootScope', '$state', function($rootScope, $state) {
@@ -55,5 +48,4 @@ angular.module('smartclickr', [
   		}
   	})
   }]); 
->>>>>>> eaa0ae2965cfa48fa84e70f7ea200f82406e936f
-}]);
+}];
