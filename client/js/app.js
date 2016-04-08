@@ -25,8 +25,8 @@ angular.module('smartclickr', [
 	 	url: '/forbidden',
 	 	templateUrl: 'views/forbidden.html'
 	 })
-	  .state('create', {
-	 	url: '/create',
+	  .state('register', {
+	 	url: '/register',
 	 	templateUrl: 'views/create.html'
 	 })
 	  .state('signup', {
@@ -36,6 +36,11 @@ angular.module('smartclickr', [
 	  .state('home', {
 	 	url: '/',
 	 	templateUrl: 'views/home.html'
+	 })
+	  .state('create', {
+	 	url: '/create',
+	 	templateUrl: 'views/createpoll.html'
 	 });
 	 $urlRouterProvider.otherwise('/');
+	 
 }]);
