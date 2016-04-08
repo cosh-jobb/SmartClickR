@@ -1,9 +1,6 @@
 'use strict';
 
-angular.module('smartclickr', [
-	'ui.router',
-	'lbServices'
-])
+angular.module('smartclickr', [	'ui.router','lbServices'])
 
 .config([ '$stateProvider', '$urlRouterProvider',
  function($stateProvider, $urlRouterProvider){

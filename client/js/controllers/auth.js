@@ -30,7 +30,7 @@ angular.module('smartclickr')
     $scope.register = function() {
       AuthService.register($scope.user.email, $scope.user.password)
         .then(function() {
-          $state.transitionTo('sign-up-success');
+          $state.transitionTo('login');
         });
     };
   }]);

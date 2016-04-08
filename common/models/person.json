@@ -1,12 +1,18 @@
 {
   "name": "Person",
-  "base": "User",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
     "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
       "type": "string",
       "required": true
     },
