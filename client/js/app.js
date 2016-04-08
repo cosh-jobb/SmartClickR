@@ -18,7 +18,8 @@ angular.module('smartclickr', [
 	 })
 	  .state('command-center', {
 	 	url: '/command-center',
-	 	templateUrl: 'views/command-center.html'
+	 	templateUrl: 'views/command-center.html',
+	 	authenticate: true
 	 })
 	  .state('forbidden', {
 	 	url: '/forbidden',
