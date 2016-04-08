@@ -38,13 +38,4 @@ angular.module('smartclickr', [
 	 	templateUrl: 'views/home.html'
 	 });
 	 $urlRouterProvider.otherwise('/');
-}])
-
- .run(['$rootScope', '$state', function($rootScope, $state) {
- 	$rootScope.$on('$stateChangeStart', function(event, next){
- 		if (next.authenticate && !$rootScope.currentUser){
- 			event.preventDefault();
- 			$state.go('forbidden');
- 		}
- 	})
- }]);
+}]);

@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SmartClickR | Create New Poll</title>
+<meta name="google-site-verification" content="wrXu0tpdDPlAZPXm6xAXBp8W5UAdLYExrcrE5UjDsZ0">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="/css/main.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/forms.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/inline-labels.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.9.2.custom.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css" media="screen">
+<style>@media screen and (max-width: 1200px){
+ .headband #session-code label.inline{
+  left: 110px !important;
+ }
+}
+
+@media screen and (max-width: 1199px){
+ .headband #session-code label.inline{
+  left: 78px !important;
+ }
+}
+
+@media screen and (max-width: 979px){
+ .headband #session-code label.inline{
+  left: 47px !important;
+ }
+}
+@media screen and (max-width: 320px){
+ #top-search label.inline.supported.empty{
+  display: none
+ }
+ </style>
+<!-- Add Jquery //-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+</script>
+<!-- Add Foundation Library //-->
+<script type="text/javascript" src="/bootstrap/bootstrap.min.js">
+</script>
+<script type="text/javascript" src="/javascript/sessionSearch.js">
+</script>
+<script type="text/javascript" src="/javascript/sessionSearchBottom.js">
+</script>
+<script type="text/javascript" src="/less.js">
+</script>
+<script src="/javascript/hisrc.js">
+</script>
+<script src="/javascript/jquery.anystretch.min.js">
+</script>
+<script type="text/javascript" src="/javascript/waypoints.min.js">
+</script>
+<script type="text/javascript" src="/javascript/scrollTo.min.js">
+</script>
+<script src="/javascript/smooth-scroll.min.js" type="text/javascript">
+</script>
+<script src="/javascript/scroll.js">
+</script>
+<script src="/inline-labels.js" type="text/javascript" charset="utf-8">
+</script>
+<noscript>
+<div id="no-js" class="modal"> <div class="modal-header">
+<p>JavaScript has been turned off.</p>
+<p>Please enable to view full site and get full use of our product. </p>
+</div>
+<div class="modal-footer">
+<a href="http://www.enable-javascript.com" target="_blank"> This article can tell you why Javascript is important and how to turn it on</a>
+</div>
+</div>
+<div class="modal-backdrop">
+</div>
+</noscript>
+</head>
+<body>
+<input type="hidden" value="63" id="userId">
+<input type="hidden" value="" id="sessionCode">
+<input type="hidden" value="" id="pollId">
+<body id="create_poll_body">
+<!-- Header Content //-->
+<header class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<a data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar">
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+</a>
+<a href="/" class="brand"> 
+SmartClickR<span> alpha</span>
+</a>
+<div class="nav-collapse in collapse">
+<ul class="nav pull-right">
+<li class="active">
+<a id="home" href="/">Home</a>
+</li>
+<li>
+<a id="account" href="/user/edit/63">Account</a>
+</li>
+<li>
+<a id="help" href="help">Help Center</a>
+</li>
+<li>
+<a id="logout" href="/logout">Log Out</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<div class="clear">
+</div>
+<article id="create_hero">
+<div class="container">
+<div class="row">
+<section id="create_title" class="span12">
+<h1>Build your poll</h1>
+</section>
+<!--section.create_actions-->
+<!--	input(type="button", id="createPollBtn", class="red button", value='Add a Question') -->
+<!--	input(type="button", id="finishBtn", class="red button", value='Finish') -->
+<!--	input(type="button", id="save_quitBtn", class="red button", value='Save and Quit') -->
+<div class="clear">
+</div>
+</div>
+</div>
+</article>
+<hr>
+<section id="content_container">
+<div class="container">
+<div class="row">
+<div class="span12">
+<div class="backdrop dropshadow">
+<section id="create_content">
+<section id="poll_info">
+<fieldset class="overlay">
+<label id="pollNameLabel" for="pollName">Poll Title  (required)</label>
+<input type="text" id="pollName" name="pollName" placeholder="This is my poll. Its Awesome." class="">
+</fieldset>
+<fieldset class="overlay">
+<label for="pollDescription">Poll Description</label>
+<textarea id="pollDescription" name="pollDescription">
+</textarea>
+</fieldset>
+<hr>
+</section>
+<section id="question_container" class="animated fadeInDown">
+</section>
+<!--include modals/poll-types-->
+<section class="create_actions">
+<input type="button" id="createPollBtn" value="Create that Poll!" class="red button">
+<div id="sub-actions">
+<div class="btn-group">
+<a id="addQuestion" data-toggle="dropdown" href="#" class="btn btn-info btn-medium dropdown-toggle">Add Question<span class="caret">
+</span>
+</a>
+<ul role="menu" aria-labelledby="dropdownMenu" class="dropdown-menu">
+<li>
+<a id="multipleChoiceBtn" value="Multiple Choice" class="">Multiple Choice</a>
+</li>
+<li>
+<a id="trueFalseBtn" value="True or False" class="">True or False</a>
+</li>
+<li>
+<a id="freeResponseBtn" value="Text Response" class="">Text Response</a>
+</li>
+<li>
+<a id="freeResponseNumericBtn" value="Numeric Response" class="">Numeric Response</a>
+</li>
+</ul>
+</div>
+<input type="submit" id="save_quitBtn" value="Save and Quit" onsubmit="Saving..." class="btn btn-mediun btn-info">
+</div>
+<div class="clear">
+</div>
+</section>
+</section>
+</div>
+</div>
+</div>
+<hr>
+</div>
+</section>
+<footer id="logged-in">
+<div id="footer_container" class="container">
+<div class="row-fluid">
+<div id="footer_content">
+<ul>
+<li id="copy"> 
+©
+SmartClickr Inc</li>
+<li class="divider-vertical">
+<a href="/help">Help Center </a>
+</li>
+<li class="divider-vertical">
+<a href="/privacy">Privacy </a>
+</li>
+<li>
+<a href="/terms">Terms of Service</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body>
+<script src="/javascript/views/create-poll.js">
+</script>
+<script src="/jquery.ui.effect-blind.js">
+</script>
+<script src="/jquery-ui-1.9.2.custom.min.js">
+</script>
+<script>$(document).ready(function(){
+$("#construct img").hisrc();
+$("#construct img+img").hisrc({ useTransparentGif: true });
+})
+
+</script>
+<script>!function(d,s,id){
+ var js,fjs=d.getElementsByTagName(s)[0];
+ if(!d.getElementById(id)){js=d.createElement(s);
+ js.id=id;
+ js.src="//platform.twitter.com/widgets.js";
+fjs.parentNode.insertBefore(js,fjs);
+}}(document,"script","twitter-wjs");</script>
+<div id="fb-root">
+</div>
+<script>(function(d, s, id) {
+ var js, fjs = d.getElementsByTagName(s)[0];
+ if (d.getElementById(id)) return;
+ js = d.createElement(s); js.id = id;
+ js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+ fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+</html>
