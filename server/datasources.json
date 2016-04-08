@@ -5,11 +5,12 @@
   },
   "post": {
     "host": "localhost",
-    "port": "5432",
+    "port": 5432,
     "database": "TEST",
     "username": "postgres",
     "password": "bkob3240",
     "name": "post",
-    "connector": "postgresql"
+    "connector": "postgresql",
+    "user": "postgres"
   }
 }
