@@ -9,7 +9,7 @@ angular.module('smartclickr')
     $scope.login = function() {
       AuthService.login($scope.user.email, $scope.user.password)
         .then(function() {
-          $state.go('command-center');
+          $state.go('home');
         });
     };
   }])

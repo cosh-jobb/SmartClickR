@@ -1,7 +1,7 @@
 {
   "name": "Person",
-  "idInjection": true,
   "base": "User",
+  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
@@ -9,11 +9,11 @@
     "username": {
       "type": "string"
     },
-    "password": {
+    "email": {
       "type": "string",
       "required": true
     },
-    "email": {
+    "password": {
       "type": "string",
       "required": true
     }
@@ -24,8 +24,8 @@
       "type": "hasMany",
       "model": "Poll",
       "foreignKey": ""
-    }
-  },
+      }
+    },
   "acls": [],
   "methods": {}
 }

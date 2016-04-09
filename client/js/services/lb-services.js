@@ -5723,7 +5723,6 @@ module.factory(
          */
         "login": {
           params: {
-            include: "user"
           },
           interceptor: {
             response: function(response) {

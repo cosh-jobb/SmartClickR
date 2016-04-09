@@ -15,6 +15,7 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	 	url: '/login',
 	 	templateUrl: 'views/login.html',
 	 	controller: 'AuthLoginController',
+	 	authorization: true
 	 })
 	  .state('command-center', {
 	 	url: '/command-center',
