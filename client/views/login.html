@@ -7,8 +7,11 @@
 <link(rel='stylesheet', type='text/css', href='/css/main.css', media='screen')>
 <link rel="stylesheet" type="text/css" href="/css/login.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/css/forms.css" media="screen">
-
-
+<!-- Add Jquery //-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+</script>
+<script type="text/javascript" src="/bootstrap/bootstrap.min.js">
+</script>
 <noscript>
 <div id="no-js" class="modal"> <div class="modal-header">
 <p>JavaScript has been turned off.</p>
@@ -42,7 +45,7 @@
 </div>
 <div class="above-below login-field clearfix">
 <label for="password" class="placeholder">Password</label>
-<input id="password" type="password" name="password" title="Password" tabindex="2" class="required form-text" ng-model= "user.password">
+<input id="password" type="password" name="password" title="Password" tabindex="2" class="required form-text" ng-model="user.password">
 <div class="clear">	</div>
 </div>
 </fieldset>
@@ -50,7 +53,7 @@
 </div>
 <input id="login_submit" type="submit" tabindex="3" value="Log In">
 <p id="remember">
-<input id="remember-me" type="checkbox" checked="false" name="remember-me">
+<input id="remember-me" type="checkbox" checked="true" name="remember-me">
 <label id="rem-label" for="remember-me">Remember Me</label>
 </p>
 <div class="clear">

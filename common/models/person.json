@@ -4,13 +4,13 @@
   "idInjection": true,
   "properties": {},
   "validations": [],
-  "relations": {
-    "polls": {
-      "type": "hasMany",
-      "model": "Poll",
-      "foreignKey": ""
-    }
-  },
+    "relations": {
+      "polls": {
+        "type": "hasMany",
+        "model": "Poll",
+        "foreignKey": ""
+      }
+    },
   "acls": [],
   "methods": {}
 }

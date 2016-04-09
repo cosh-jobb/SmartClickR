@@ -4,7 +4,7 @@ angular
       $rootScope) {
     function login(email, password) {
       return User
-        .login({email: User.email, password: User.password})
+        .login({email: email, password: password})
         .$promise
         .then(function(response) {
           $rootScope.currentUser = {
