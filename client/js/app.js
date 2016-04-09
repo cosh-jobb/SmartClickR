@@ -28,11 +28,8 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	  .state('register', {
 	 	url: '/register',
 	 	templateUrl: 'views/create.html',
-	 	controller: 'Registration'
-	 })
-	  .state('signup', {
-	 	url: '/signup',
-	 	templateUrl: 'views/signup.html'
+	 	controller: 'Registration',
+	 	authorization: true
 	 })
 	  .state('home', {
 	 	url: '/',

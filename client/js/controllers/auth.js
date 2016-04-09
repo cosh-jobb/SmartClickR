@@ -2,14 +2,14 @@ angular.module('smartclickr')
   .controller('AuthLoginController', ['$scope', 'AuthService', '$state',
       function($scope, AuthService, $state) {
     $scope.user = {
-      email: 'foo@bar.com',
-      password: 'foobar'
+      email: 'test@test.com',
+      password: 'test'
     };
 
     $scope.login = function() {
       AuthService.login($scope.user.email, $scope.user.password)
         .then(function() {
-          $state.go('home');
+          $state.go('command-center');
         });
     };
   }])

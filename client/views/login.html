@@ -36,13 +36,13 @@
 <fieldset class="clearfix">
 <div class="above-below login-field clearfix">
 <label for="email" class="placeholder">Your Email </label>
-<input id="email" type="input" name="email" title="Email Address" tabindex="1" autocomplete="off" class="required form-text" ng-model=user.login>
+<input id="email" type="input" name="email" title="Email Address" tabindex="1" autocomplete="off" class="required form-text" ng-model="user.email">
 <div class="clear">
 </div>
 </div>
 <div class="above-below login-field clearfix">
 <label for="password" class="placeholder">Password</label>
-<input id="password" type="password" name="password" title="Password" tabindex="2" class="required form-text" ng-model=user.password>
+<input id="password" type="password" name="password" title="Password" tabindex="2" class="required form-text" ng-model= "user.password">
 <div class="clear">	</div>
 </div>
 </fieldset>
@@ -50,7 +50,7 @@
 </div>
 <input id="login_submit" type="submit" tabindex="3" value="Log In">
 <p id="remember">
-<input id="remember-me" type="checkbox" checked="true" name="remember-me">
+<input id="remember-me" type="checkbox" checked="false" name="remember-me">
 <label id="rem-label" for="remember-me">Remember Me</label>
 </p>
 <div class="clear">
