@@ -16,9 +16,6 @@
     "email": {
       "type": "string",
       "required": true
-    },
-    "DoB": {
-      "type": "date"
     }
   },
   "validations": [],
