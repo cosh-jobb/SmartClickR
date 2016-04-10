@@ -2,9 +2,6 @@
   "name": "Responses",
   "base": "PersistedModel",
   "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
   "properties": {
     "Response_id": {
       "type": "number",

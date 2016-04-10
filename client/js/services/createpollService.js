@@ -1,13 +1,15 @@
   angular
   .module('smartclickr')
-  .factory('createpollService', ['Person', 'Poll', '$q', '$rootScope', function(Poll, $q,
-      $rootScope) {
-    function Creation(name, description) {
+  .factory('pollservice', ['Random', 'Poll', '$q', '$rootScope', function(Poll, $q,
+      $rootScope, Random) {
+    function CREATION(name, description, Random) {
       console.log('the poll creation is about to commence');
-      return Poll
+      Poll
         .create({
           name : name,
-          description: description})
+          description: description,
+          sessionid: Random.makeid()
+        })
         .$promise
         .then(function(response) {
           console.log('the login response was ', response);
