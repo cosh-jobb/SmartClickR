@@ -1,15 +1,11 @@
   angular
   .module('smartclickr')
-  .factory('pollservice', ['Random', 'Poll', '$q', '$rootScope', function(Poll, $q,
-      $rootScope, Random) {
-    function CREATION(name, description, Random) {
-      console.log('the poll creation is about to commence');
-      Poll
-        .create({
-          name : name,
-          description: description,
-          sessionid: Random.makeid()
-        })
+  .factory('createpollservice', ['Poll', '$q', '$rootScope', function(Poll, $q,
+      $rootScope) {
+    function create(Name, Description) {
+      console.log('the login is about to commence');
+      return Poll
+        .create({Name: Name, Description:Description, Sessioncode:'aaaa'})
         .$promise
         .then(function(response) {
           console.log('the login response was ', response);
@@ -17,6 +13,6 @@
     }
 
     return {
-      CREATION:CREATION
+      create: create
     };
   }]);

@@ -3,14 +3,6 @@
   "base": "PersistedModel",
   "idInjection": true,
   "properties": {
-    "Poll_id": {
-      "type": "number",
-      "required": true
-    },
-    "Owner_id": {
-      "type": "number",
-      "required": true
-    },
     "Name": {
       "type": "string",
       "required": true
@@ -22,16 +14,8 @@
       "type": "number"
     },
     "Sessioncode": {
-      "type": "string"
-    },
-    "CreateDate": {
-      "type": "date"
-    },
-    "StartDate": {
-      "type": "date"
-    },
-    "EndDate": {
-      "type": "date"
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
@@ -47,6 +31,13 @@
       "foreignKey": ""
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }

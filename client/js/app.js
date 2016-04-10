@@ -49,6 +49,10 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	 	url: '/poll',
 	 	templateUrl: 'views/poll.html',
 	 	controller: 'PollControllers'
+	 })
+	  .state('testquestions', {
+	 	url: '/q',
+	 	templateUrl: 'views/q.html'
 	 });
 	 $urlRouterProvider.otherwise('/');
 	}])
