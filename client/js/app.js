@@ -19,7 +19,8 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	 })
 	  .state('command-center', {
 	 	url: '/command-center',
-	 	templateUrl: 'views/command-center.html'
+	 	templateUrl: 'views/command-center.html',
+	 	controller: 'Home'
 	 })
 	  .state('forbidden', {
 	 	url: '/forbidden',
@@ -41,12 +42,13 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	 })
 	  .state('create', {
 	 	url: '/create',
-	 	templateUrl: 'views/createpoll.html'
+	 	templateUrl: 'views/createpoll.html',
+	 	controller: 'createpoll'
 	 })
 	  .state('poll', {
 	 	url: '/poll',
 	 	templateUrl: 'views/poll.html',
-	 	controller: 'PollController'
+	 	controller: 'PollControllers'
 	 });
 	 $urlRouterProvider.otherwise('/');
 	}])
