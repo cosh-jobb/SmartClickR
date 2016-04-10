@@ -1,4 +1,4 @@
-  angular
+angular
   .module('smartclickr')
   .factory('pollservice', ['Poll', '$q', '$rootScope', function(Poll, $q,
       $rootScope) {
@@ -25,7 +25,7 @@
         });
     }
 
-    return {
-      creation: creation
-    };
+      return {
+        creation: creation
+      };
   }]);
