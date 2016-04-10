@@ -8,8 +8,8 @@ angular.module('smartclickr')
         };
 
     $scope.creation = function() {
-      pollservice.CREATION(
-        $scope.user.email, $scope.user.description
+      pollservice.creation(
+        $scope.user.name, $scope.user.description
       )
       .then(
         function() {
