@@ -1,23 +1,10 @@
-    angular
-        .module('smartclickr')
-        .factory('Random', [function makeid()
-			{
-			    var text = "";
-			    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-				    for( var i=0; i < 10; i++ )
- 			       text += possible.charAt(Math.floor(Math.random() * possible.length));
-
- 			   return text;
-			}]);	
-        angular
+angular
   .module('smartclickr')
   .factory('Random', [function() {
 
     function makeid() {
-      	console.log('the random string is about to commence');
       	var text = "";
-		var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
 		for( var i=0; i < 10; i++ )
  		text += possible.charAt(Math.floor(Math.random() * possible.length));
@@ -26,6 +13,6 @@
     }
 
     return {
-    	makeid:makeid
+    	makeid: makeid
     };
   }]);

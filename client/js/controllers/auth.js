@@ -1,17 +1,15 @@
 angular.module('smartclickr')
-  .controller('AuthLoginController', ['$scope', 'AuthService','sessionvariables','$rootScope', '$state',
-      function($scope, AuthService, $state, sessionvariables, $rootScope) {
+  .controller('AuthLoginController', ['Random','$scope', 'AuthService', '$state', '$q',
+        function($scope, AuthService, $state, $q, Random) {
     $scope.user = {
       email: 'foo@bar.com',
-      password: 'foobar'
+      password: 'foobar',
+      sessioncode: Random.makeid()
     };
-
+    
     $scope.login = function() {AuthService.login($scope.user.email, $scope.user.password)
-      .then(function() {sessionvariables.CUID($rootScope.currentUser.id)
-        .then(function() {$state.go('command-center');
-        });
-    });
-  }}])
+      .then(function() {$state.go('command-center');});};
+  }])
   .controller('AuthLogoutController', ['$scope', 'AuthService', '$state',
       function($scope, AuthService, $state) {
     AuthService.logout()

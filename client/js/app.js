@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('smartclickr', [	'ui.router','lbServices'])
+  .run(function($rootScope){$rootScope.test = new Date();})
 
 
 .config([ '$stateProvider', '$urlRouterProvider',
