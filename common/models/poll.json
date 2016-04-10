@@ -7,10 +7,6 @@
       "type": "number",
       "required": true
     },
-    "Owner_id": {
-      "type": "number",
-      "required": true
-    },
     "Name": {
       "type": "string",
       "required": true
@@ -32,6 +28,10 @@
     },
     "EndDate": {
       "type": "date"
+    },
+    "Owner_id": {
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],
