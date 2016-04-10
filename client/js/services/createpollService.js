@@ -2,15 +2,15 @@ angular
   .module('smartclickr')
   .factory('pollservice', ['Poll', '$q', '$rootScope', function(Poll, $q,
       $rootScope) {
-    function creation(Name, Description) {
+    function creation(name, description) {
 
       	return Poll
       	.create
       	({
 		  Poll_id: 0,
 		  Owner_id: 0,
-		  Name: Name,
-		  Description: Description,
+		  Name: name,
+		  Description: description,
 		  Order: 0,
 		  Sessioncode: 'string',
 		  CreateDate: 2016-04-10,
