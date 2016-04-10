@@ -1,4 +1,3 @@
 angular.module('smartclickr')
-.controller('PollController', ['$scope', 'Poll', function($scope, Poll) {
-	$scope.polls = Poll.find();
-}]);
+	.controller('PollControllers', ['$scope', 'Poll', 
+		function($scope, Poll) {$scope.polls = Poll.find();}]);

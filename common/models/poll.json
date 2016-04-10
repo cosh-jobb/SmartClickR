@@ -44,9 +44,9 @@
       "model": "Question",
       "foreignKey": ""
     },
-    "users": {
+    "person": {
       "type": "belongsTo",
-      "model": "Users",
+      "model": "Person",
       "foreignKey": ""
     }
   },
