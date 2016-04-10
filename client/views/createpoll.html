@@ -11,7 +11,8 @@
 <link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.9.2.custom.min.css">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css" media="screen">
-<style>@media screen and (max-width: 1200px){
+<style>
+@media screen and (max-width: 1200px){
  .headband #session-code label.inline{
   left: 110px !important;
  }
@@ -32,7 +33,7 @@
  #top-search label.inline.supported.empty{
   display: none
  }
-	}
+} 
  </style>
 <!-- Add Jquery //-->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
@@ -133,37 +134,7 @@ SmartClickR<span> alpha</span>
 
 
 <hr>
-<form id="loginForm" method="post" ng-submit="creation()">
-<fieldset class="clearfix">
-<div class="above-below login-field clearfix">
-<label for="email" class="placeholder">Name of Poll</label>
-<input id="email" type="input" name="email" title="Email Address" tabindex="1" autocomplete="off" class="required form-text" ng-model="user.name">
-<div class="clear">
-</div>
-</div>
-<div class="above-below login-field clearfix">
-<label for="password" class="placeholder">Description of Poll</label>
-<input id="password" type="password" name="password" title="Password" tabindex="2" class="required form-text" ng-model="user.description">
-<div class="clear">	</div>
-</div>
-</fieldset>
-<div class="twelve columns no_pad">
-</div>
-<input id="login_submit" type="submit" tabindex="3" value="Log In">
-<!--<p id="remember">
-<input id="remember-me" type="checkbox" checked="true" name="remember-me">
-<label id="rem-label" for="remember-me">Remember Me</label>
-</p>
-<div class="clear">
-</div>-->
-<p>
-<a id="needSignup" href="/user/create">Need to Signup? </a>
-<span class="linebreak">|</span>
-<a id="reset" href="/lostpassword">Forgot Your Password?	</a>
-</p>
-<hr>
-</form>
-<!--<form id="pollSubmitForm" method="post" ng-submit="createpoll()">
+<form ng-submit="creationofpoll()">
 <section id="content_container">
 <div class="container">
 <div class="row">
@@ -173,26 +144,26 @@ SmartClickR<span> alpha</span>
 <section id="poll_info">
 <fieldset class="overlay">
 <label id="pollNameLabel" for="pollName">Poll Title  (required)</label>
-<input type="text" id="pollName" name="pollName" placeholder="This is my poll. Its Awesome." ng-input="user.name">
+<input type="text" id="pollName" name="pollName" placeholder="This is my poll. Its Awesome." ng-input="name">
 </fieldset>
 <fieldset class="overlay">
 <label for="pollDescription">Poll Description</label>
-<textarea id="pollDescription" name="pollDescription" ng-input="user.description">
+<textarea id="pollDescription" name="pollDescription" ng-input="description">
 </textarea>
 </fieldset>
 <hr>
 </section>
 <section id="question_container" class="animated fadeInDown">
 </section>
-include modals/poll-types
+<!--include modals/poll-types-->
 <section class="create_actions">
-<input id="poll_submit" type="submit" tabindex="3" value="Create that Poll!">
+<input type="button" id="createPollBtn" value="Create that Poll!" class="red button" ng-click="creationofpoll()">
 
-<div id="sub-actions">
+<!--<div id="sub-actions">
 
 <input type="submit" id="save_quitBtn" value="Save and Quit" onsubmit="Saving..." class="btn btn-mediun btn-info">
-</div>
-</form>-->
+</div>-->
+</form>
 <div class="clear">
 </div>
 </section>

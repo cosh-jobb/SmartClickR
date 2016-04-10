@@ -4,6 +4,7 @@ angular.module('smartclickr')
         $scope.user = {
           name: 'asd',
           description: 'asd'
+          
         };
 
     $scope.creation = function() {

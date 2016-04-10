@@ -40,8 +40,8 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	 	url: '/',
 	 	templateUrl: 'views/home.html'
 	 })
-	  .state('create', {
-	 	url: '/create',
+	  .state('createpoll', {
+	 	url: '/createpoll',
 	 	templateUrl: 'views/createpoll.html',
 	 	controller: 'createpoll'
 	 })
