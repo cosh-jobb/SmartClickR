@@ -2,9 +2,6 @@
   "name": "Choices",
   "base": "PersistedModel",
   "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
   "properties": {
     "Choice_id": {
       "type": "number",

@@ -6,8 +6,7 @@ angular.module('smartclickr')
       password: 'foobar'
     };
 
-    $scope.login = function() {
-      AuthService.login($scope.user.email, $scope.user.password)
+    $scope.login = function() {AuthService.login($scope.user.email, $scope.user.password)
         .then(function() {
           $state.go('command-center');
         });

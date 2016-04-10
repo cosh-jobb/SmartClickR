@@ -2,9 +2,6 @@
   "name": "Poll",
   "base": "PersistedModel",
   "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
   "properties": {
     "Poll_id": {
       "type": "number",

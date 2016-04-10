@@ -2,9 +2,6 @@
   "name": "Question",
   "base": "PersistedModel",
   "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
   "properties": {
     "Question_id": {
       "type": "number",
