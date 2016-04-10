@@ -1,19 +1,16 @@
 angular.module('smartclickr')
-    .controller('createpoll', ['$scope', 'Poll', 'Random', 'pollservice',
-      '$state', function($scope, Poll, $state, pollservice) {
-        $scope.user = {
-          name: 'asd',
-          description: 'asd'
+    .controller('createpoll', ['$scope', 'pollservice',
+      '$state', function($scope, pollservice, $state) {
+        $scope.poll = {
           
         };
 
     $scope.creation = function() {
-      pollservice.creation(
-        $scope.user.name, $scope.user.description
-      )
+      console.log($scope.poll);
+      pollservice.creation($scope.poll.name, $scope.poll.description)
       .then(
         function() {
-          $state.go('createQuestion');
+          $state.go('home');
         }
       );
     };

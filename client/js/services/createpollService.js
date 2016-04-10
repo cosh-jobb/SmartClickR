@@ -1,16 +1,16 @@
   angular
   .module('smartclickr')
-  .factory('pollservice', ['Random', 'Poll', '$q', '$rootScope', function(Poll, $q,
-      $rootScope, Random) {
-    function creation(name, description) {
-      console.log('the poll creation is about to commence');
+  .factory('pollservice', ['Poll', '$q', '$rootScope', function(Poll, $q,
+      $rootScope) {
+    function creation(Name, Description) {
+
       	return Poll
       	.create
       	({
 		  Poll_id: 0,
 		  Owner_id: 0,
-		  Name: name,
-		  Description: description,
+		  Name: Name,
+		  Description: Description,
 		  Order: 0,
 		  Sessioncode: 'string',
 		  CreateDate: 2016-04-10,
@@ -21,7 +21,7 @@
         })
         .$promise
         .then(function(response) {
-          console.log('the login response was ', response);
+          //console.log('the login response was ', response);
         });
     }
 
