@@ -27,7 +27,7 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	 	templateUrl: 'views/forbidden.html'
 	 })
 	  .state('register', {
-	 	url: '/register',
+	 	url: '/create',
 	 	templateUrl: 'views/create.html',
 	 	controller: 'Registration',
 	 	authorization: true
@@ -55,12 +55,21 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	 	url: '/poll/answer',
 	 	templateUrl: 'views/enterPoll.html',
 	 	controller: 'entering'
+	 })
+	  .state('wrongcode', {
+	 	url: '/nopollfound',
+	 	templateUrl: 'views/badcode.html',
+	 	controller: 'first'
+	 })
+	  .state('answeringquestions', {
+	 	url: '/poll/answer/question',
+	 	templateUrl: 'views/answeringquestions.html',
+	 	controller: 'question'
 	 });
 	 $urlRouterProvider.otherwise('/');
 	}])
  
   .run(['$rootScope', '$state', function($rootScope, $state) {
-  	console.log($rootScope.currentUser);
   	$rootScope.$on('$stateChangeStart', function(event, next){
   		if (next.authenticate && !$rootScope.currentUser){
   			event.preventDefault();

@@ -3,6 +3,8 @@ angular
   .factory('pollservice', ['Poll', '$q', '$rootScope', function(Poll, $q,
       $rootScope) {
     function creation(name, description, Sessioncode, userId) {
+      console.log("THIS IS WHAT I GOT: ", name, description, Sessioncode, userId)
+      var why = userId;
       	return Poll
       	.create
       	({
@@ -13,12 +15,9 @@ angular
 		  CreateDate: 2016-04-10,
 		  StartDate: 2016-04-10,
 		  EndDate: 2016-04-10,
-      personid: userId
+      personId: why
         })
-        .$promise
-        .then(function(response) {
-          console.log('the currentUsers id is: ', $rootScope.currentUser)
-        });
+        .$promise;
     }
 
       return {

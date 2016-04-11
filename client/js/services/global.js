@@ -2,6 +2,9 @@ angular
   .module('smartclickr')
   .factory('global', [function() {
     var user = '';
+    var answeringPoll = '';
+    var makingPoll = '';
+    var question = 1;
 
     function setUser(InputUser) {
       user = InputUser;
@@ -9,12 +12,35 @@ angular
       return user
     }
 
-    function getUser(InputUser) {
+    function getUser() {
       return user
+    }
+
+    function setAPoll(code) {
+      answeringPoll = code;
+      return answeringPoll
+    }
+
+    function getAPoll() {
+      return answeringPoll
+    }
+
+    function setQuestion(int) {
+      question = int;
+      console.log("CURRENT QUESTION NUMBER", question)
+      return question
+    }
+
+    function getQ() {
+      return question
     }
 
     return {
       setUser: setUser,
-      getUser: getUser
+      getUser: getUser,
+      setAPoll: setAPoll,
+      getAPoll: getAPoll,
+      setQuestion: setQuestion,
+      getQ: getQ
     };
   }]);

@@ -7,14 +7,9 @@ angular.module('smartclickr')
 
     $scope.creation = function() {
       var sessionC = random.makecode();
-      console.log($scope.poll);
       var userjson = global.getUser();
+      console.log('The user id is: ' ,userjson.userId);
       pollservice.creation($scope.poll.name, $scope.poll.description, sessionC, userjson.userId)
-      .then(
-        function() {
-          $state.go('home');
-        }
-      );
     };
       }
     ]

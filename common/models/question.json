@@ -3,14 +3,6 @@
   "base": "PersistedModel",
   "idInjection": true,
   "properties": {
-    "Question_id": {
-      "type": "number",
-      "required": true
-    },
-    "Poll_id": {
-      "type": "number",
-      "required": true
-    },
     "Stem": {
       "type": "string"
     },
@@ -19,6 +11,9 @@
     },
     "QuestionOrder": {
       "type": "number"
+    },
+    "Sessionid": {
+    "type": "string"
     }
   },
   "validations": [],

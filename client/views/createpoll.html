@@ -75,9 +75,6 @@
 </noscript>
 </head>
 <body>
-<input type="hidden" value="63" id="userId">
-<input type="hidden" value="" id="sessionCode">
-<input type="hidden" value="" id="pollId">
 <body id="create_poll_body">
 <!-- Header Content //-->
 <header class="navbar navbar-inverse navbar-fixed-top">
@@ -91,22 +88,22 @@
 <span class="icon-bar">
 </span>
 </a>
-<a href="/" class="brand"> 
+<a href="#/" class="brand"> 
 SmartClickR<span> alpha</span>
 </a>
 <div class="nav-collapse in collapse">
 <ul class="nav pull-right">
 <li class="active">
-<a id="home" href="/">Home</a>
+<a id="home" href="#/">Home</a>
 </li>
 <li>
-<a id="account" href="/user/edit/63">Account</a>
+<a id="account" href="#/edituser">Account</a>
 </li>
 <li>
-<a id="help" href="help">Help Center</a>
+<a id="help" href="#/help">Help Center</a>
 </li>
 <li>
-<a id="logout" href="/logout">Log Out</a>
+<a id="logout" href="#/logout">Log Out</a>
 </li>
 </ul>
 </div>
@@ -157,12 +154,11 @@ SmartClickR<span> alpha</span>
 </section>
 <!--include modals/poll-types-->
 <section class="create_actions">
-<input type="submit" id="createPollBtn" value="Create that Poll!" class="red button">
-
-<!--<div id="sub-actions">
-
-<input type="submit" id="save_quitBtn" value="Save and Quit" onsubmit="Saving..." class="btn btn-mediun btn-info">
-</div>-->
+<div id="parentbuttons">
+<div id="createpollbutton">
+<input type="submit" id="createPollBtn" value="Create that Poll!" class="red button" on-Click="removeElement('parentbuttons','createbutton');">
+</div>
+</div>
 </form>
 <div class="clear">
 </div>
@@ -185,13 +181,13 @@ SmartClickR<span> alpha</span>
 <li id="copy"> 
 SmartClickr Inc</li>
 <li class="divider-vertical">
-<a href="/help">Help Center </a>
+<a href="#/help">Help Center </a>
 </li>
 <li class="divider-vertical">
-<a href="/privacy">Privacy </a>
+<a href="#/privacy">Privacy </a>
 </li>
 <li>
-<a href="/terms">Terms of Service</a>
+<a href="#/terms">Terms of Service</a>
 </li>
 </ul>
 </div>
