@@ -3,7 +3,6 @@ angular
   .factory('pollservice', ['Poll', '$q', '$rootScope', function(Poll, $q,
       $rootScope) {
     function creation(name, description, Sessioncode, userId) {
-
       	return Poll
       	.create
       	({

@@ -38,7 +38,8 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	 })
 	  .state('home', {
 	 	url: '/',
-	 	templateUrl: 'views/home.html'
+	 	templateUrl: 'views/home.html',
+	 	controller: 'first'
 	 })
 	  .state('createpoll', {
 	 	url: '/createpoll',
@@ -49,6 +50,11 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	 	url: '/poll',
 	 	templateUrl: 'views/poll.html',
 	 	controller: 'PollControllers'
+	 })
+	  .state('aftersessioncode', {
+	 	url: '/poll/answer',
+	 	templateUrl: 'views/enterPoll.html',
+	 	controller: 'entering'
 	 });
 	 $urlRouterProvider.otherwise('/');
 	}])
