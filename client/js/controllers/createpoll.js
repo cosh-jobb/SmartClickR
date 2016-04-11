@@ -5,10 +5,9 @@ angular.module('smartclickr')
           
         };
 
-    $scope.creation = function() {Random.makeid()      
-        .then(function() {pollservice.creation($scope.poll.name, $scope.poll.description)
-      });}
-      
+    $scope.creation = function() {
+      console.log($scope.poll);
+      pollservice.creation($scope.poll.name, $scope.poll.description)
       .then(
         function() {
           $state.go('home');
