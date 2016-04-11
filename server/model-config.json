@@ -35,7 +35,9 @@
   },
   "Poll": {
     "dataSource": "post",
-    "public": true
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "Question": {
     "dataSource": "post",

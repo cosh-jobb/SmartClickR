@@ -2,19 +2,10 @@
   "name": "Poll",
   "base": "PersistedModel",
   "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
   "properties": {
-    "Poll_id": {
-      "type": "number",
-      "required": true
-    },
-    "Owner_id": {
-      "type": "number",
-      "required": true
-    },
-    "Name": {
-      "type": "string",
-      "required": true
-    },
     "Description": {
       "type": "string"
     },
@@ -32,6 +23,16 @@
     },
     "EndDate": {
       "type": "date"
+    },
+    "Name": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "owner_id": {
+      "type": "string",
+      "id": true,
+      "required": true
     }
   },
   "validations": [],

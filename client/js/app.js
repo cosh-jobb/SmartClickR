@@ -54,6 +54,7 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	}])
  
   .run(['$rootScope', '$state', function($rootScope, $state) {
+  	console.log($rootScope.currentUser);
   	$rootScope.$on('$stateChangeStart', function(event, next){
   		if (next.authenticate && !$rootScope.currentUser){
   			event.preventDefault();
