@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SmartClickR | Present Data</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="/css/landing.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/main.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-responsive.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.9.2.custom.min.css">
+<!-- Add Jquery //-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
+</script>
+<!-- Add Bootstrap Library //-->
+<script type="text/javascript" src="/bootstrap/bootstrap.min.js">
+</script>
+<!-- Socket.io-->
+<script type="text/javascript" src="/socket.io/socket.io.js">
+</script>
+<!-- D3 Library-->
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js">
+</script>
+<!-- D3 Scripts-->
+<!-- include file -->
+<script type="text/javascript" src="/javascript/d3/info-config.js">
+</script>
+<script type="text/javascript" src="/javascript/d3/pie.js">
+</script>
+<script type="text/javascript" src="/javascript/d3/vert_bars.js">
+</script>
+<!-- Add Less //-->
+<script type="text/javascript" src="/less.js">
+</script>
+<noscript>
+<div id="no-js" class="modal"> <div class="modal-header">
+<p>JavaScript has been turned off.</p>
+<p>Please enable to view full site and get full use of our product. </p>
+</div>
+<div class="modal-footer">
+<a href="http://www.enable-javascript.com" target="_blank"> This article can tell you why Javascript is important and how to turn it on</a>
+</div>
+</div>
+<div class="modal-backdrop">
+</div>
+</noscript>
+</head>
+<body>
+<body id="present-page">
+<!-- Header Content //-->
+<header class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<a data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar">
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+</a>
+<a href="/" class="brand"> 
+SmartClickr<span> alpha</span>
+</a>
+<div class="nav-collapse">
+<ul class="nav pull-right">
+<li class="active">
+<a id="home" href="/">Home</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<div class="clear">
+</div>
+<div id="landing-pad" class="visible-desktop">
+</div>
+<div id="landing-container">
+<!--.container		-->
+<div class="row-fluid">					<div id="hero_content_present" class="present-content">
+<div id="content-main">
+<div class="present-titles clearfix">
+<h3 class="span6"> Question 1</h3>
+<h3 class="span6 code">Session Code: wWZJ</h3>
+</div>
+<h2>Who is sonic</h2>
+<input type="hidden" id="questionID" value="435">
+<article id="graph-display" class="clearfix">
+<div id="tabber" class="tabbable">
+<ul class="nav nav-tabs">
+<li id="tab-pie" class="pie-chart active">
+<a href="#pie-display" data-toggle="tab">Pie Chart</a>
+</li>
+<li id="tab-bar" class="bar-chart">
+<a href="#bar-display" data-toggle="tab">Bar Chart</a>
+</li>
+</ul>
+<!--	li#tab-cloud.word-cloud-->
+<!--		a(href="#cloud-display", data-toggle="tab", class="disabled") Word Cloud-->
+<div class="tab-content">
+<div id="pie-display" class="tab-pane active clearfix">
+</div>
+<div id="bar-display" class="tab-pane clearfix">
+</div>
+</div>
+<!--	div#cloud-display.tab-pane.clearfix-->
+<!--		p I am a word cloud-->
+</div>
+</article>
+</div>
+</div>
+<div id="present-actions" class="clearfix">
+<ul class="pager span4 offset4">
+<li class="previous">
+<a id="starting-question" href="/" class="disabled">&larr; Home</a>
+</li>
+<li class="next">
+<a id="starting-question" href="/user/63/poll/130/question/present/436" class="">Next &rarr;</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+<script>var dataPath = '/user/' + 63 + '/poll/' + 130 + '/question/' + 435 + '.json';
+d3.json(dataPath, function(json) {
+ pieChart(json, dataPath);
+ verticalBars(json, dataPath);
+});
+</script>
+<script src="/javascript/d3/resize.js">
+</script>
+</body>
+</html>
