@@ -1,13 +1,15 @@
 angular.module('smartclickr')
-    .controller('createpoll', ['$scope', 'pollservice',
-      '$state', function($scope, pollservice, $state) {
+    .controller('createpoll', ['$scope', 'pollservice', 'random',
+      '$state','global', function($scope, pollservice, random, $state, global) {
         $scope.poll = {
           
         };
 
     $scope.creation = function() {
+      var sessionC = random.makecode();
       console.log($scope.poll);
-      pollservice.creation($scope.poll.name, $scope.poll.description)
+      var userjson = global.getUser();
+      pollservice.creation($scope.poll.name, $scope.poll.description, sessionC, userjson.userId)
       .then(
         function() {
           $state.go('home');

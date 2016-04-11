@@ -29,7 +29,7 @@
       "id": true,
       "required": true
     },
-    "owner_id": {
+    "personId": {
       "type": "string",
       "id": true,
       "required": true

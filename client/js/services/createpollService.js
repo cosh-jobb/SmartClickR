@@ -2,7 +2,7 @@ angular
   .module('smartclickr')
   .factory('pollservice', ['Poll', '$q', '$rootScope', function(Poll, $q,
       $rootScope) {
-    function creation(name, description) {
+    function creation(name, description, Sessioncode, userId) {
 
       	return Poll
       	.create
@@ -10,10 +10,11 @@ angular
 		  Name: name,
 		  Description: description,
 		  Order: 0,
-		  Sessioncode: 'string',
+		  Sessioncode: Sessioncode,
 		  CreateDate: 2016-04-10,
 		  StartDate: 2016-04-10,
 		  EndDate: 2016-04-10,
+      personid: userId
         })
         .$promise
         .then(function(response) {
