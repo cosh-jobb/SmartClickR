@@ -7,7 +7,7 @@ angular
         $scope.QNo = 1;
         global.setQuestion($scope.QNo);
         $scope.SC = global.getAPoll().$promise;
-        $timeout(, 2000);
+        $timeout(2000);
         Question.find({
           filter: {
             where:{
