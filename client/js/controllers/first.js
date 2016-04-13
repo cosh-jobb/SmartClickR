@@ -14,8 +14,8 @@ angular.module('smartclickr')
         }
       }).$promise
           .then(function(response) {
-            $scope.reviews = response;
-            $scope.notarray = $scope.reviews[0];
+            $scope.array = response;
+            $scope.notarray = $scope.array[0];
             if ($scope.notarray) {
               global.setAPoll($scope.notarray)
               $state.go('aftersessioncode');
