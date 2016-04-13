@@ -33,9 +33,9 @@
  #top-search label.inline.supported.empty{
   display: none
  }
-} 
+}
  </style>
-<!-- Add Jquery //-->
+ <!-- Add Jquery //-->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
 </script>
 <!-- Add Foundation Library //-->
@@ -74,7 +74,11 @@
 </div>
 </noscript>
 </head>
+
 <body>
+<input type="hidden" value="62" id="userId">
+<input type="hidden" value="" id="sessionCode">
+<input type="hidden" value="" id="pollId">
 <body id="create_poll_body">
 <!-- Header Content //-->
 <header class="navbar navbar-inverse navbar-fixed-top">
@@ -88,22 +92,22 @@
 <span class="icon-bar">
 </span>
 </a>
-<a href="#/" class="brand"> 
+<a href="/" class="brand"> 
 SmartClickR<span> alpha</span>
 </a>
 <div class="nav-collapse in collapse">
 <ul class="nav pull-right">
 <li class="active">
-<a id="home" href="#/">Home</a>
+<a id="home" href="/">Home</a>
 </li>
 <li>
-<a id="account" href="#/edituser">Account</a>
+<a id="account" href="/user/edit/62">Account</a>
 </li>
 <li>
-<a id="help" href="#/help">Help Center</a>
+<a id="help" href="help">Help Center</a>
 </li>
 <li>
-<a id="logout" href="#/logout">Log Out</a>
+<a id="logout" href="/logout">Log Out</a>
 </li>
 </ul>
 </div>
@@ -127,11 +131,7 @@ SmartClickR<span> alpha</span>
 </div>
 </div>
 </article>
-
-
-
 <hr>
-<form ng-submit="creation()">
 <section id="content_container">
 <div class="container">
 <div class="row">
@@ -141,11 +141,11 @@ SmartClickR<span> alpha</span>
 <section id="poll_info">
 <fieldset class="overlay">
 <label id="pollNameLabel" for="pollName">Poll Title  (required)</label>
-<input type="text" id="pollName" name="pollName" placeholder="This is my poll. Its Awesome." ng-input="name" ng-model="poll.name">
+<input type="text" id="pollName" name="pollName" placeholder="This is my poll. Its Awesome." class="">
 </fieldset>
 <fieldset class="overlay">
 <label for="pollDescription">Poll Description</label>
-<textarea id="pollDescription" name="pollDescription" ng-input="description" ng-model="poll.description">
+<textarea id="pollDescription" name="pollDescription">
 </textarea>
 </fieldset>
 <hr>
@@ -154,12 +154,30 @@ SmartClickR<span> alpha</span>
 </section>
 <!--include modals/poll-types-->
 <section class="create_actions">
-<div id="parentbuttons">
-<div id="createpollbutton">
-<input type="submit" id="createPollBtn" value="Create that Poll!" class="red button" on-Click="removeElement('parentbuttons','createbutton');">
+<input type="button" id="createPollBtn" value="Create that Poll!" class="red button">
+<div id="sub-actions">
+<div class="btn-group">
+<a id="addQuestion" data-toggle="dropdown" href="#" class="btn btn-info btn-medium dropdown-toggle">Add Question
+<span class="caret">
+</span>
+</a>
+<ul role="menu" aria-labelledby="dropdownMenu" class="dropdown-menu">
+<li>
+<a id="multipleChoiceBtn" value="Multiple Choice" class="">Multiple Choice</a>
+</li>
+<li>
+<a id="trueFalseBtn" value="True or False" class="">True or False</a>
+</li>
+<li>
+<a id="freeResponseBtn" value="Text Response" class="">Text Response</a>
+</li>
+<li>
+<a id="freeResponseNumericBtn" value="Numeric Response" class="">Numeric Response</a>
+</li>
+</ul>
 </div>
+<input type="submit" id="save_quitBtn" value="Save and Quit" onsubmit="Saving..." class="btn btn-mediun btn-info">
 </div>
-</form>
 <div class="clear">
 </div>
 </section>
@@ -170,24 +188,22 @@ SmartClickR<span> alpha</span>
 <hr>
 </div>
 </section>
-
-
-
 <footer id="logged-in">
 <div id="footer_container" class="container">
 <div class="row-fluid">
 <div id="footer_content">
 <ul>
 <li id="copy"> 
+©
 SmartClickr Inc</li>
 <li class="divider-vertical">
-<a href="#/help">Help Center </a>
+<a href="/help">Help Center </a>
 </li>
 <li class="divider-vertical">
-<a href="#/privacy">Privacy </a>
+<a href="/privacy">Privacy </a>
 </li>
 <li>
-<a href="#/terms">Terms of Service</a>
+<a href="/terms">Terms of Service</a>
 </li>
 </ul>
 </div>

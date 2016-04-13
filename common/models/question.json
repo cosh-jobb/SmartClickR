@@ -2,18 +2,29 @@
   "name": "Question",
   "base": "PersistedModel",
   "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
   "properties": {
-    "Stem": {
-      "type": "string"
-    },
     "Answertype": {
       "type": "string"
     },
     "QuestionOrder": {
       "type": "number"
     },
+    "Stem": {
+      "type": "string",
+      "required": true
+    },
     "Sessionid": {
-    "type": "string"
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "pollid": {
+      "type": "string",
+      "id": true,
+      "required": true
     }
   },
   "validations": [],

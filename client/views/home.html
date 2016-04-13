@@ -32,6 +32,7 @@
  #top-search label.inline.supported.empty{
   display: none
  }
+}
  </style>
 <!-- Add Jquery //-->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
@@ -94,13 +95,13 @@ SmartClickr</a>
 <a id="home" href="#/">Home</a>
 </li>
 <li>
-<a id="features" href="#/features">Features</a>
+<a id="features" ui-sref="features">Features</a>
 </li>
 <li>
-<a id="signup" href="#/create">Sign Up</a>
+<a id="signup" ui-sref="register">Sign Up</a>
 </li>
 <li>
-<a id="log" href="#/login">Log In</a>
+<a id="log" ui-sref="login">Log In</a>
 </li>
 </ul>
 </div>
@@ -127,7 +128,7 @@ SmartClickr</a>
 <h1 class="title">Hi, I'm SmartClickr</h1>
 <p>An elegant, real-time, audience interaction system that gives you a better way to ask questions and create polls<ul class="btn-contain clearfix">
 <li class="create-wrap span6">
-<a id="top-create" href="/create" class="btn  btn-large">Create an Account</a>
+<a id="top-create" ui-sref="register" class="btn  btn-large">Create an Account</a>
 </li>
 <li class="tour-wrap span6">
 <a id="top-tour" href="#/features" class="btn  btn-large">Take a Tour</a>
@@ -192,7 +193,7 @@ SmartClickr</a>
 <section class="bottom-actions clearfix">
 <ul class="send-to-features span10 offset1">
 <li>
-<a id="to-features" href="/features" class="btn-red btn-huge">see all features &rarr;</a>
+<a id="to-features" ui-sref="features" class="btn-red btn-huge">see all features &rarr;</a>
 </li>
 </ul>
 </section>
