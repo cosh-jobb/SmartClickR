@@ -9,9 +9,6 @@
     "Answertype": {
       "type": "string"
     },
-    "QuestionOrder": {
-      "type": "number"
-    },
     "Stem": {
       "type": "string",
       "required": true
@@ -21,8 +18,8 @@
       "id": true,
       "required": true
     },
-    "pollid": {
-      "type": "string",
+    "QuestionOrder": {
+      "type": "number",
       "id": true,
       "required": true
     }

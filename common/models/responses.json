@@ -11,21 +11,6 @@
     },
     "Name": {
       "type": "string"
-    },
-    "questionid": {
-      "type": "number",
-      "id": true,
-      "required": true
-    },
-    "responseid": {
-      "type": "number",
-      "id": true,
-      "required": true
-    },
-    "personid": {
-      "type": "number",
-      "id": true,
-      "required": true
     }
   },
   "validations": [],

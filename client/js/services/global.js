@@ -1,10 +1,10 @@
 angular
   .module('smartclickr')
-  .factory('global', [function() {
+  .factory('global', [ '$q', '$timeout', function($q, $timeout) {
     var user = '';
     var answeringPoll = '';
     var makingPoll = '';
-    var question = 1;
+    var question = 0;
     var logged = false;
 
     function setUser(InputUser) {
@@ -23,7 +23,7 @@ angular
       return answeringPoll
     }
 
-    function getAPoll() {
+    function getAPoll() {      
       return answeringPoll
     }
 
