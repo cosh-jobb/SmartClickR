@@ -5,9 +5,11 @@ angular
     var answeringPoll = '';
     var makingPoll = '';
     var question = 1;
+    var logged = false;
 
     function setUser(InputUser) {
       user = InputUser;
+      logged = true;
       console.log("THE NEW USER IS: ", user)
       return user
     }
@@ -35,12 +37,17 @@ angular
       return question
     }
 
+    function logged() {
+      return logged
+    }
+
     return {
       setUser: setUser,
       getUser: getUser,
       setAPoll: setAPoll,
       getAPoll: getAPoll,
       setQuestion: setQuestion,
-      getQ: getQ
+      getQ: getQ,
+      logged: logged
     };
   }]);

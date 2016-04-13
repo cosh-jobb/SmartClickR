@@ -86,7 +86,7 @@
 <span class="icon-bar">
 </span>
 </a>
-<a href="/" class="brand"> 
+<a href="#/" class="brand"> 
 SmartClickr</a>
 <div class="nav-collapse collapse">
 <ul class="nav pull-right">
@@ -97,7 +97,7 @@ SmartClickr</a>
 <a id="features" href="#/features">Features</a>
 </li>
 <li>
-<a id="signup" href="#/create">Sign Up</a>
+<a id="signup" href="#/user/create">Sign Up</a>
 </li>
 <li>
 <a id="log" href="#/login">Log In</a>
@@ -111,7 +111,7 @@ SmartClickr</a>
 <div class="container">
 <div class="row-fluid">
 <h3>Have a session code? </h3>
-<form id="top-search" class="form-inline" ng-submit="usepoll()">
+<form id="top-search" method="GET" action="/poll" class="form-inline">
 <fieldset>
 <legend class="ninja">Enter a session code</legend>
 <input type="search" id="index-top-input" placeholder="Enter it here">
@@ -127,7 +127,7 @@ SmartClickr</a>
 <h1 class="title">Hi, I'm SmartClickr</h1>
 <p>An elegant, real-time, audience interaction system that gives you a better way to ask questions and create polls<ul class="btn-contain clearfix">
 <li class="create-wrap span6">
-<a id="top-create" href="/create" class="btn  btn-large">Create an Account</a>
+<a id="top-create" href="#/create" class="btn  btn-large">Create an Account</a>
 </li>
 <li class="tour-wrap span6">
 <a id="top-tour" href="#/features" class="btn  btn-large">Take a Tour</a>
@@ -137,26 +137,21 @@ SmartClickr</a>
 </div>
 </div>
 </section>
-
-
 <section id="session-code" class="headband clearfix hidden-phone">
 <div class="container">
 <div class="row-fluid">
 <h3>Have a session code? </h3>
-<form id="bottom-search" class="form-inline" ng-submit="usepoll()">
+<form id="bottom-search" method="GET" action="/poll" class="form-inline">
 <fieldset>
 <legend class="ninja">Enter a session code</legend>
 <label for="index-bottom-input" style="top: 10px !important; left:118px; width: auto !important; " class="inline">Enter it here</label>
-<input type="search" id="index-bottom-input" ng-model="enteredcode">
-<button type="submit">Find it &rarr;</button>
+<input type="search" id="index-bottom-input">
+<button type="submit" name="session" class="btn btn-info">Find it &rarr;</button>
 </fieldset>
 </form>
 </div>
 </div>
 </section>
-
-
-
 </header>
 <section id="tour-top">
 <div class="main">
@@ -192,7 +187,7 @@ SmartClickr</a>
 <section class="bottom-actions clearfix">
 <ul class="send-to-features span10 offset1">
 <li>
-<a id="to-features" href="/features" class="btn-red btn-huge">see all features &rarr;</a>
+<a id="to-features" href="#/features" class="btn-red btn-huge">see all features &rarr;</a>
 </li>
 </ul>
 </section>
@@ -238,13 +233,13 @@ SmartClickr</a>
 <h5>Navigation</h5>
 <ul>
 <li>
-<a href="/">Home</a>
+<a href="#/">Home</a>
 </li>
 <li>
-<a href="/features">Features</a>
+<a href="#/features">Features</a>
 </li>
 <li>
-<a href="/help">Help Center</a>
+<a href="#/help">Help Center</a>
 </li>
 </ul>
 </div>
@@ -252,11 +247,11 @@ SmartClickr</a>
 <h5>Connect</h5>
 <ul>
 <li>
-<a href="/about">About Us</a>
+<a href="#/about">About Us</a>
 </li>
 <!--li: a(href='/data') Data-->
 <li>
-<a href="/contact">Contact</a>
+<a href="#/contact">Contact</a>
 </li>
 </ul>
 </div>
@@ -264,10 +259,10 @@ SmartClickr</a>
 <h5>Legal</h5>
 <ul>
 <li>
-<a href="/privacy">Privacy</a>
+<a href="#/privacy">Privacy</a>
 </li>
 <li>
-<a href="/terms">Terms</a>
+<a href="#/terms">Terms</a>
 </li>
 </ul>
 </div>
@@ -293,7 +288,7 @@ SmartClickr</a>
 <div id="legal">
 <span id="kind">Handcrafted with<span id="love">&hearts;</span>in Harrisonburg, VA</span>
 <span id="copy">Copyright &copy; 2012-<span id="date">2016</span>
-<a href="/">SmartClickr</a>,<span id="rights">All Rights Reserved</span>
+<a href="#/">SmartClickr</a>,<span id="rights">All Rights Reserved</span>
 </span>
 </div>
 <script src="/javascript/scroll.js">

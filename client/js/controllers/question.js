@@ -1,20 +1,17 @@
 angular
   .module('smartclickr')
   .controller('question', 
-    ['$scope', 'Poll', '$rootScope', 'global', 'Question', function($scope,
-      Poll, $rootScope, global, Question) {
-      $scope.QNo = global.getQ();
-      console.log($scope.QNo);
-      $scope.SC = global.getAPoll().Sessioncode;
-      var sc = 'C0zRV';
-      console.log($scope.SC);
-      $scope.stem = '';
+    ['$scope', 'Poll', '$rootScope', 'global', 'Question', '$q', function($scope,Poll, $rootScope, global, Question, $q) {
+
+      $scope.startup = function () {
       Question.find({
-  		}).$promise
-        .then(function(response) {
-          $scope.array = response;
-          $scope.notarray = $scope.array[0];
-          console.log($scope.notarray)
-          $scope.stem = $scope.notarray.Stem
-        });
-        }])
+      filter: {
+        where:{Sessionid: 'C0zRV', QuestionOrder: 1}
+      }
+    }).then(function(response) {$scope.array = response;})
+      };
+
+      $scope.startup()
+
+    }]
+  );

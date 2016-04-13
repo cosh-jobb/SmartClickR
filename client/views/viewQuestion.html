@@ -49,29 +49,18 @@
 <div id="hero_content_response" class="span6 offset3">
 <span id="question-wrap" class="span12">
 <h4 id="question-number">Question 1</h4>
-<h3 id="question-content">Who is sonic</h3>
+<h3 id="question-content">How many hours of sleep have you gotten?</h3>
 </span>
 <div class="clear">
 </div>
-<form id="response-form" method="POST" action="/poll/wWZJ/question/435" class="clearfix">
-<div id="mc-container" class="span12 no-margin">
-<label class="radio inline">
-<input type="radio" value="Sonic" name="response" class="mc_response">1) Sonic</label>
-</div>
-<div id="mc-container" class="span12 no-margin">
-<label class="radio inline">
-<input type="radio" value="Bob" name="response" class="mc_response">2) Bob</label>
-</div>
-<div id="mc-container" class="span12 no-margin">
-<label class="radio inline">
-<input type="radio" value="Joe" name="response" class="mc_response">3) Joe</label>
-</div>
-<div id="mc-container" class="span12 no-margin">
-<label class="radio inline">
-<input type="radio" value="Jane" name="response" class="mc_response">4) Jane</label>
+<form id="response-form" method="POST" action="/poll/BtJV/question/455" class="clearfix">
+<div id="num-container">
+<textarea name="response" placeholder="Type in your response" id="numericresponse" class="n_response span12">
+</textarea>
+<script>$(".n_response").focus();</script>
 </div>
 <div id="next" class="span12">
-<input type="submit" id="MultipleChoice_response" value="Next Question &rarr;" class="btn btn-large btn-info">
+<input type="submit" id="Numeric_response" value="Next Question &rarr;" class="btn btn-large btn-info">
 <!--span Question #{locals.qdata[0].QuestionsOrder} of #{locals.qdata[0].QuestionOrder.length-1});-->
 </div>
 </form>
