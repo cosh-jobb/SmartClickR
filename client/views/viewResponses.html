@@ -23,11 +23,11 @@
 </script>
 <!-- D3 Scripts-->
 <!-- include file -->
-<script type="text/javascript" src="/javascript/d3/info-config.js">
+<script type="text/javascript" src="public/javascript/d3/info-config.js">
 </script>
-<script type="text/javascript" src="/javascript/d3/pie.js">
+<script type="text/javascript" src="public/javascript/d3/pie.js">
 </script>
-<script type="text/javascript" src="/javascript/d3/vert_bars.js">
+<script type="text/javascript" src="public/javascript/d3/vert_bars.js">
 </script>
 <!-- Add Less //-->
 <script type="text/javascript" src="/less.js">
@@ -45,7 +45,6 @@
 </div>
 </noscript>
 </head>
-<body>
 <body id="present-page">
 <!-- Header Content //-->
 <header class="navbar navbar-inverse navbar-fixed-top">
@@ -122,13 +121,23 @@ SmartClickr<span> alpha</span>
 </div>
 </div>
 </body>
-<script>var dataPath = '/user/' + 63 + '/poll/' + 130 + '/question/' + 435 + '.json';
+<!--
+<script>var dataPath = responses.findById(1);
 d3.json(dataPath, function(json) {
  pieChart(json, dataPath);
  verticalBars(json, dataPath);
 });
 </script>
+-->
+
+<script>
+function showResults() {
+ var dataPath = responses.findById(1);
+	console.log(dataPath);
+	console.log('this is stuff');
+}
+
+</script>
 <script src="/javascript/d3/resize.js">
 </script>
-</body>
 </html>

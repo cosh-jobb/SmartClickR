@@ -64,7 +64,8 @@ angular.module('smartclickr', [	'ui.router','lbServices'])
 	 })
 	  .state('viewingresponses', {
 	  	url: '/results',
-	  	templateUrl: 'views/viewResponses.html'
+	  	templateUrl: 'views/viewResponses.html',
+	  	controller: 'results'
 	  	});
 	 $urlRouterProvider.otherwise('/');
 	}])
